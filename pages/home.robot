@@ -31,6 +31,25 @@ Quando clicar na Programacao
 Entao deve ser confirmado a visualizacao da programacao
     Element Should Be Enabled               //*[@class="row programacao--row js-programacao-container"]
 
+Quando clicar em Mais Acoes
+    Element Should Be Enabled               //*[@class="acoes"]
+
+Entao deve ser confirmado a visualizacao do Mais Acoes
+    Element Should Be Enabled               //*[@class="owl-carousel owl-theme owl-acoes owl-loaded owl-drag"]
+
+Quando clicar no Footer
+    Element Should Be Enabled               //*[@class="footer"]
+
+Entao deve ser confirmado a visualizacao do Footer
+    Element Should Be Enabled               //*[@class="footer"]
+
+Quando clicar no Cabecario
+    Element Should Be Enabled               //*[@class="header-container"]
+
+Entao deve ser confirmado a visualizacao do Cabecario
+    Element Should Be Enabled               //*[@class="container"]
+
+
 
 
     

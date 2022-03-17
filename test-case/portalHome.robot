@@ -29,7 +29,22 @@ Cenario 3: Editorial
     Quando clicar no editorial 
     Entao pagina deve exibir o editorial 
 
-Cenario 3: Programacao
+Cenario 4: Programacao
     Dado que acesso a pagina do sesc
     Quando clicar na Programacao 
     Entao deve ser confirmado a visualizacao da programacao
+
+Cenario 5: Mais Acoes
+    Dado que acesso a pagina do sesc
+    Quando clicar em Mais Acoes 
+    Entao deve ser confirmado a visualizacao do Mais Acoes
+    
+Cenario 6: Cabecario
+    Dado que acesso a pagina do sesc
+    Quando clicar no Cabecario
+    Entao deve ser confirmado a visualizacao do Cabecario
+
+Cenario 7: Footer
+    Dado que acesso a pagina do sesc
+    Quando clicar no Footer
+    Entao deve ser confirmado a visualizacao do Footer
