@@ -47,7 +47,7 @@ Quando clicar no Cabecario
     Element Should Be Enabled               //*[@class="header-container"]
 
 Entao deve ser confirmado a visualizacao do Cabecario
-    Element Should Be Enabled               //*[@class="container"]
+    Element Should Be Enabled               //*[@class="header"]
 
 
 

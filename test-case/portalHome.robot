@@ -16,7 +16,7 @@ Resource   ../pages/resource.robot
 
 Cenario 1: Acesso a pagina principal
     Dado que acesso a pagina do sesc
-    #Quando clicar no botao Continuar do cokie 
+    Quando clicar no botao Continuar do cokie 
     Entao sistema deve exibir pagina principal do sesc
 
 Cenario 2: Carregar Carrocel
