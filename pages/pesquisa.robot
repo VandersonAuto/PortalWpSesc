@@ -17,7 +17,7 @@ E clicar na aba area
     Click Element                             //*[@id="categoria"]
 
 E esperar ate aparecer elemento
-    Wait Until Element Contains               //*[@class="btn btn-secondary dropdown-toggle"]             
+    Wait Until Element Contains               //*[@class="btn btn-secondary dropdown-toggle"]                         
 
 Quando Selecionar a categoria 
     Click Element                            //*[@data-categoria="alimentacao"]

@@ -8,11 +8,6 @@ Library   SeleniumLibrary
 
 ***Keywords***
 
-
-E Clicar no cookie
-    Click Element       //*[@class="button-policy"]
-
-
 E selecionar Unidade "${unidade}"
     Click Element       //*[@href="/unidades/${unidade}"]  
 
