@@ -13,17 +13,18 @@ Resource   ../pages/pesquisa.robot
 Resource   ../pages/unidades.robot
 
 ***Test Cases***
-Cenário 1 - Botão pesquisa
-    Dado que acesso a pagina do sesc 
-    E Clicar no cookie
-    Quando clico no botão de pesquisas 
-    #Então é habilitado digitar para realizar pesquisa
 
 Cenário 2 - Realizar pesquisa de 1 item com sucesso.
-    Dado que acesso a pagina do sesc
-    Quando clico no botão de pesquisas
-    e realizo pesquisa de 1 item válido
-    Então o site apresenta o item solicitado na pesquisa
+    [tags]     teste
+    #Dado
+    resource.que acesso a pagina do sesc
+    resource.E Clicar no cookie
+    #e 
+    home.realizo pesquisa de item "Piscina"
+    #Quando 
+    home.clico no botão de pesquisas
+    #Então 
+    pesquisa.o site apresenta o item solicitado na pesquisa
 
 Cenário 3 - Realizar pesquisa de 2 itens simultaneamente com sucesso
     Dado que acesso a pagina do sesc
