@@ -1,34 +1,44 @@
 *** Settings ***
 Library          SeleniumLibrary
 
+*** Variables ***
+${BROWSER}                 chrome
+${HOME}                    https://www.sescsp.org.br/
+${PAGINA_LOGIN}            https://www.sescsp.org.br/login/
+
 ***Keywords***
-E insiro usuario correto 
-    Input Text                           //*[@id="page-login-sesc-usuarios"]/div/div[2]/div[2]/div[2]/div/label/input    henrique_schulter@hotmail.com     
+que estou na pagina de login
+    Open Browser    url:      ${BROWSER}
+    Go To                     ${PAGINA_LOGIN}      
+
+insiro usuario correto "${usuario_correto}"
+    Input Text                           //input[@placeholder='Email']    ${usuario_correto}   
     
-E insiro senha correta   
-    Input Password                       //*[@type="password"]    Fpcac123
+insiro senha correta ${senha_correta}   
+    Input Password                       //*[@type="password"]            ${senha_correta} 
 
-Quando insiro senha incorreta
-    Input Password                       //*[@type="password"]    habudagas
+insiro senha incorreta
+    Input Password                       //*[@type="password"]            habudagas
 
-Quando Clicar em entrar    
+Clicar em entrar    
     Click Button                         Entrar   
 
-Então sou direcionado para area logada
-    Title Should Be                      Sesc São Paulo
+sou direcionado para area logada
+    Set Selenium Timeout                 20 seconds
+    Element Should Contain               //*[text()="Olá "]    Olá   
 
-E insiro usuario incorreto
-    Wait Until Element Is Enabled        //*[@id="page-login-sesc-usuarios"]/div/div[2]/div[2]/div[2]/div/label/input         
-    Input Text                           //*[@id="page-login-sesc-usuarios"]/div/div[2]/div[2]/div[2]/div/label/input        xiforinfula@gmail.com
+insiro "${usuario incorreto}" 
+    Wait Until Element Is Enabled        //input[@placeholder='Email']         
+    Input Text                           //input[@placeholder='Email']        ${usuario incorreto}
 
 #Questão: Mensagem de erro sobre usuário incorreto, apresenta LOCATOR que desaparece 
 #antes de ser detectado pela automação: "*Nenhum usuário foi encontrado."
-Então mensagem de usuario inexistente é apresentada
+mensagem de usuario inexistente é apresentada
     Wait Until Element Is Enabled        //*[@class="notfound-user"]
 
 #Questão: Mensagem de erro sobre SENHA incorreta, apresenta LOCATOR que desaparece 
 #antes de ser detectado pela automação: "*Nenhum usuário foi encontrado."
-Então mensagem de senha incorreta é apresentada
+mensagem de senha incorreta é apresentada
     Wait Until Element Is Enabled        //*[@class="notfound-user"]
 
 

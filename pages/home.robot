@@ -4,18 +4,21 @@
 Library   SeleniumLibrary
 
 *** Variables ***
-
 ${HOME_BOTAO_PESQUISA}      //*[@id="bt-s"]                     
 ${HOME_INSERIRPESQUISA}     //*[@class="form-control mr-sm-2"] 
+${HOME_PESQUISAUNIDADE}     //*[@id="dropdownMenuButton"]
 
 ***Keywords***
 
 
 Quando clicar no botao Continuar do cokie
-    Click Element       //*[@class="button-policy"]
+    Click Element                            //*[@class="button-policy"]
 
 clico no botão de pesquisas 
-    Click Element                    ${HOME_BOTAO_PESQUISA}
+    Click Element                            ${HOME_BOTAO_PESQUISA}
+
+clico no botão encontre sua programação
+    Click Element                            ${HOME_PESQUISAUNIDADE}
 
 realizo pesquisa de item "${item}"    
 #Substituir o item piscina para qualquer item desejável
@@ -43,13 +46,13 @@ Entao sistema deve exibir pagina principal do sesc
     Title Should Be     Sesc São Paulo
 
 Quando Clicar no carrossel 
-    Element Should Be Enabled                //*[@class="carrossel loading"]
+    Element Should Be Enabled               //*[@class="carrossel loading"]
 
 Entao a pagina exibir o carrossel
-    Element Should Be Enabled                //*[@class="container"]
+    Element Should Be Enabled               //*[@class="container"]
 
 Quando clicar no editorial 
-    Element Should Be Enabled                //*[@class="title-container"]
+    Element Should Be Enabled               //*[@class="title-container"]
 
 Entao pagina deve exibir o editorial
     Element Should Be Enabled               //*[@class="editorial-row destaque"]
